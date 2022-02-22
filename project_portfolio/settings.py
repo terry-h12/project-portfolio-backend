@@ -25,10 +25,11 @@ SECRET_KEY = 'django-insecure-k*822awo=x=22-q+ob7-k5eb7l$@n4v0d6@o#9x9!@okk1tx*3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'terry-h12-project-portfolio.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'terry-h12-project-portfolio.herokuapp.com', 'project-portfolio-manager.herokuapp.com']
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"
+    'http://localhost:3000',
+    'https://project-portfolio-manager.herokuapp.com/'
 ]
 
 # Application definition
@@ -174,4 +175,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
-
